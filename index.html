@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Future</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img class="header-logo" src="img/logo.png" alt="Fashion Future" />
+            <h1>Fashion Future</h1>
+        </div>
+    </header>
+    <nav>
+        <a href="category.html">Man's</a>
+        <a href="womencategory.html">Women's</a>
+        <a href="#">News</a>
+        <a href="#">Sale</a>
+    </nav>
+    <main> 
+<div class="fashion-container">
+    <div class="fashionone">
+        <p>Одежда — это не просто прикладной инструмент для защиты тела от холода или зноя. 
+        Это сложнейшая семиотическая система, «вторая кожа» и материальный манифест нашего внутреннего «Я». 
+        Если вдуматься, одежда — это единственный объект материального мира, который сопровождает человека от первого вздоха до последнего,
+        становясь молчаливым свидетелем его эволюции.</p>
+        <p>Одежда как граница между «Я» и «Миром»
+        Философски одежда представляет собой пограничное состояние. Она обозначает предел нашего физического тела и начало внешнего пространства. 
+        Это мембрана, которая одновременно защищает нашу уязвимость и транслирует нашу силу. Выбирая, что надеть, мы бессознательно решаем, 
+        какую часть своей души мы готовы открыть миру, а какую — оставить в сакральной тишине приватности.</p>
+    </div>
+</div>
+      <section id="men" class="category">
+  
+        <div class="bestseller"><h1>Bestseller</h1></div>
+        
+            <div class="products">
+                <div class="product" data-id="tshirt-1" data-name="Футболка" data-price="799">
+                    <a href="items/T-shirt.html"><img src="img/t-shirt.jpg" alt="Футболка мужская" /></a>
+                    <div class="product-meta">
+                      <h3>Футболка</h3>
+                      <p class="price">799 ₽</p>
+                      <a href="items/T-shirt.html" class="btn-small">Подробнее</a>
+                    </div>
+                </div>
+                <div class="product" data-id="puffer-1" data-name="Куртка Puffer" data-price="4999">
+                    <a href="items/puffer.html"><img src="jacket/puffer.jpg" alt="Куртка мужская" /></a>
+                    <div class="product-meta">
+                      <h3>Куртка</h3>
+                      <p class="price">4 999 ₽</p>
+                        <a href="items/puffer.html" class="btn-small">Подробнее</a>
+
+                    </div>
+                </div>
+                <div class="product" data-id="jeans-1" data-name="Джинсы" data-price="1999">
+                    <a href="items/jeansman.html"><img src="img/jeansman.jpg" alt="Джинсы мужские" /></a>
+                    <div class="product-meta">
+                      <h3>Джинсы</h3>
+                      <p class="price">1 999 ₽</p>
+                      <a href="items/jeansman.html" class="btn-small">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="women" class="category">
+            <div class="products">
+                <div class="product" data-id="plate-1" data-name="Платье" data-price="3499">
+                    <a href="items/plate.html"><img src="img/plate.jpeg" alt="Платье женское" /></a>
+                    <div class="product-meta">
+                      <h3>Платье</h3>
+                      <p class="price">3 499 ₽</p>
+                      <a href="items/plate.html" class="btn-small">Подробнее</a>
+                    </div>
+                </div>
+                <div class="product" data-id="bluzka-1" data-name="Блузка" data-price="1299">
+                    <a href="items/bluzka.html"><img src="img/bluzka.jpg" alt="Блузка женская" /></a>
+                    <div class="product-meta">
+                      <h3>Блузка</h3>
+                      <p class="price">1 299 ₽</p>
+                      <a href="items/bluzka.html" class="btn-small">Подробнее</a>
+                    </div>
+                </div>
+                <div class="product" data-id="yslheels" data-name="Туфли" data-price="30 000">
+                    <img src="img/yslheels.jpg" alt="Юбка" />
+                    <div class="product-meta">
+                      <h3>Туфли</h3>
+                      <p class="price">30 000 ₽</p>
+                      <a href="items/yslheels.html" class="btn-small">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<div id="overlay" class="overlay" tabindex="-1" hidden></div>
+
+<aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" hidden>
+  <div class="cart-header">
+    <h2 id="cart-title">Корзина</h2>
+    <button id="close-cart" aria-label="Закрыть корзину">×</button>
+  </div>
+
+  <div class="cart-body" id="cart-items">
+  </div>
+
+  <div class="cart-footer">
+    <div class="cart-total">Итого: <span id="cart-total">0 ₽</span></div>
+    <button id="checkout" class="btn-primary">Оформить заказ</button>
+  </div>
+</aside>
+
+<footer class="main-footer">
+  <div class="footer-container">
+    
+    <div class="footer-col logo-info">
+      <div class="legal-info">
+        <p>ИП Самарский Дмитрий Константинович</p>
+        <p>ИНН 77777777777</p>
+        <p>ОГРНИП 777777777777777</p>
+        <p>FashionFutureCollection@yandex.ru</p>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Полезное</h3>
+      <ul>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Контакты</h3>
+      <p>Адрес оффлайн магазина — г. Кемерово, ул. Ленина, 73</p>
+      <p class="phone">Для заказа онлайн и в другие города<br>+7 777 777 77 77</p>
+      
+      <div class="social-icons">
+        <a href="https://t.me/imfashiongeek">Telegram</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<script src="korzina.js"></script>
+<script>
+  document.addEventListener('click', function(e){
+  const btn = e.target.closest('.add-to-cart');
+  if(!btn) return;
+  e.preventDefault();
+  const product = btn.closest('.product');
+  if(!product) return;
+
+  const priceRaw = product.dataset.price || (product.querySelector('.price')?.textContent || '');
+  const price = String(priceRaw).replace(/\s|₽/g, '').trim();
+
+  const item = {
+    id: product.dataset.id,
+    name: product.dataset.name || product.querySelector('h3')?.textContent || 'Товар',
+    price: Number(price) || 0,
+    qty: 1,
+    img: product.querySelector('img')?.src || ''
+  };
+
+  if(window.Cart && typeof window.Cart.add === 'function'){
+    window.Cart.add(item);
+  } else {
+    document.dispatchEvent(new CustomEvent('cart:add', { detail: item }));
+  }
+});
+</script>
+</body>
+</html>

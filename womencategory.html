@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="one.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img class="header-logo" src="img/logo.png" alt="Fashion Future" />
+            <h1>Fashion Future</h1>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Главная</a>
+    </nav>
+
+    <main>
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="all">Все</button>
+            <button class="filter-btn" data-category="puffer">Пуховики</button>
+            <button class="filter-btn" data-category="outerwear">Верхняя одежда</button>
+            <button class="filter-btn" data-category="longsleeve">Лонгсливы</button>
+            <button class="filter-btn" data-category="tshirt">Футболки</button>
+            <button class="filter-btn" data-category="bottoms">Штаны</button>
+            <button class="filter-btn" data-category="footwear">Обувь</button>
+            <button class="filter-btn" data-category="sneakers">Кроссовки</button>
+            <button class="filter-btn" data-category="accessories">Аксессуары</button>
+        </div>
+    
+            <h2 class="section-title">Women's clothes</h2>
+
+        <div class="products" id="mens-clothes">
+
+        <div class="products" id="women-clothes">
+            <div class="product" data-category="heels">
+                <a href="items/yslheels.html">
+                    <img src="img/yslheels.jpg" alt="Туфли" />
+                </a>
+                <h3>Туфли Saint Laurent</h3>
+                <p>YSL</p>
+                <div class="product-price">25 000 ₽</div>
+                <a href="items/yslheels.html" class="btn-small">Подробнее</a>
+            </div>
+        </div>
+        <div class="products" id="women-clothes">
+            <div class="product" data-category="heels">
+                <a href="items/cesarepaccoti.html">
+                    <img src="img/cesarepaccotiheels.jpg" alt="Туфли" />
+                </a>
+                <h3>Туфли cesare paccoti</h3>
+                <p>CP</p>
+                <div class="product-price">30 000 ₽</div>
+                <a href="items/yslheels.html" class="btn-small">Подробнее</a>
+            </div>
+        </div>
+        <div class="products" id="women-clothes">
+            <div class="product" data-category="hoodie">
+                <a href="items/loubutin.html">
+                    <img src="img/loubutinheels.jpg" alt="Худи" />
+                </a>
+                <h3>Christian Loubutine</h3>
+                <p>Туфли So Kate</p>
+                <div class="product-price">20 000₽</div>
+                <a href="" class="btn-small">Подробнее</a>
+            </div>
+        </div>
+        <div class="products" id="women-clothes">
+            <div class="product" data-category="heels">
+                <a href="">
+                    <!--<img src="" alt="Худи" />-->
+                </a>
+                <h3>in development</h3>
+                <p></p>
+                <div class="product-price"></div>
+                <a href="" class="btn-small">Подробнее</a>
+            </div>
+        </div>
+        <div class="products" id="women-clothes">
+            <div class="product" data-category="heels">
+                <a href="">
+                    <!--<img src="" alt="Худи" />-->
+                </a>
+                <h3>in development</h3>
+                <p></p>
+                <div class="product-price"></div>
+                <a href="" class="btn-small">Подробнее</a>
+            </div>
+        </div>
+        <div class="products" id="women-clothes">
+            <div class="product" data-category="hoodie">
+                <a href="">
+                    <!--<img src="" alt="Худи" />-->
+                </a>
+                <h3>in development</h3>
+                <p></p>
+                <div class="product-price"></div>
+                <a href="" class="btn-small">Подробнее</a>
+            </div>
+        </div>
+        
+    </div>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col logo-info">
+                <img src="img/logo.png" alt="FFClogo" class="footer-logo" />
+                <div class="legal-info">
+                    <p>ИП Самарский Дмитрий Константинович</p>
+                    <p>ИНН 77777777777</p>
+                    <p>ОГРНИП 777777777777777</p>
+                    <p>FashionFutureCollection@yandex.ru</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Полезное</h3>
+                <ul>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Контакты</h3>
+                <p>Адрес оффлайн магазина — г. Кемерово, ул. Ленина, 73</p>
+                <p class="phone">Для заказа онлайн и в другие города<br /><strong>+7 777 777 77 77</strong></p>
+                <div class="social-icons">
+                    <a href="https://t.me/imfashiongeek">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const products = document.querySelectorAll('.product');
+
+            function filterProducts(category) {
+                products.forEach(product => {
+                    if (category === 'all' || product.dataset.category === category) {
+                        product.classList.remove('hidden');
+                    } else {
+                        product.classList.add('hidden');
+                    }
+                });
+            }
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const category = this.dataset.category;
+                    filterProducts(category);
+                });
+            });
+
+            filterProducts('all');
+
+            document.querySelectorAll('.product').forEach(product => {
+                product.addEventListener('click', function (event) {
+                    if (event.target.closest('a') || event.target.closest('.btn-small')) return;
+                    const link = this.querySelector('a');
+                    if (link) window.location.href = link.href;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

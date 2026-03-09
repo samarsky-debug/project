@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #faf9f6;
+    color: #1e1e1e;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-logo {
+    width: 100px;
+    height: auto;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: -0.02em;
+    color: #000;
+}
+
+nav {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 2rem 0.5rem;
+    display: flex;
+    gap: 2rem;
+    font-weight: 500;
+    border-bottom: 1px solid #eaeaea;
+}
+
+nav a {
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    border-bottom-color: #000;
+    color: #000;
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 2.5rem 0 1.5rem;
+}
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid #e0e0e0;
+    border-radius: 40px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #555;
+}
+
+.filter-btn:hover {
+    border-color: #000;
+    color: #000;
+}
+
+.filter-btn.active {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+
+.product {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 1.5rem 1.5rem 2rem;
+    transition: box-shadow 0.3s, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+    
+    /* Фиксированные размеры карточки */
+    width: 300px;
+    height: 500px;
+    
+    /* Используем grid для точного выравнивания */
+    display: grid;
+    grid-template-rows: 280px auto auto 40px 1fr;
+    gap: 0.5rem;
+    align-content: start;
+}
+
+.product:hover {
+    box-shadow: 0 20px 30px -8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+}
+
+.product a:first-of-type {
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    
+    /* Фиксированные размеры для контейнера изображения */
+    width: 100%;
+    height: 280px;
+    grid-row: 1;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.product:hover img {
+    transform: scale(1.03);
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+    max-height: 2.8rem;
+    grid-row: 2;
+}
+
+.product p {
+    color: #666;
+    margin: 0;
+    font-size: 0.95rem;
+    
+    /* Ограничение описания до 1 строки */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    grid-row: 3;
+}
+
+.product-price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #000;
+    margin: 0;
+    grid-row: 4;
+    align-self: center;
+}
+
+.btn-small {
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    display: inline-block;
+    border: 2px solid #000;
+    transition: 0.2s;
+    font-size: 0.9rem;
+    text-align: center;
+    
+    /* Фиксируем кнопку внизу карточки */
+    grid-row: 5;
+    align-self: end;
+    justify-self: start;
+    width: fit-content;
+}
+
+.btn-small:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.product.hidden {
+    display: none;
+}
+
+.main-footer {
+    background-color: #111;
+    color: #ddd;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+}
+
+.footer-col h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 0.7rem;
+}
+
+.footer-col a {
+    color: #bbb;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 1rem;
+    filter: invert();
+}
+
+.legal-info p {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.3rem;
+}
+
+.phone {
+    margin: 1rem 0;
+}
+
+.phone strong {
+    color: #fff;
+}
+
+.social-icons a {
+    display: inline-block;
+    background-color: #222;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    border: 1px solid #444;
+}
+
+.social-icons a:hover {
+    background-color: #000;
+    border-color: #fff;
+}
+
+@media (max-width: 700px) {
+    header, nav, main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    nav {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+    }
+
+    .filter-container {
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        justify-content: center;
+    }
+    
+    .product {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        min-height: 500px;
+        margin: 0 auto;
+        
+        /* Адаптивная сетка для мобильных */
+        grid-template-rows: 280px auto auto 40px 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .product {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 500px;
+    }
+    
+    .product a:first-of-type {
+        height: 350px;
+    }
+    
+    /* Адаптивная сетка для очень маленьких экранов */
+    .product {
+        grid-template-rows: 350px auto auto 40px 1fr;
+    }
+}
